@@ -74,7 +74,12 @@ export default function AnalyticsDashboardSimulator() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-tag">Interactive Component</span>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
+            <span className="section-tag" style={{ margin: 0 }}>Interactive Component</span>
+            <span className="badge badge-amber" style={{ textTransform: 'none', fontWeight: 600, letterSpacing: 'normal' }}>
+              Sample data for demonstration
+            </span>
+          </div>
           <h2 className="section-title">THOTFY-Analytic // Live Blueprint Simulator</h2>
           <p className="section-subtitle">
             Experience the 5-tier product performance engine created to synthesize ad spend, cross-channel attribution, and PostgreSQL ground-truth orders into automated marketing decisions.

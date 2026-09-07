@@ -4,7 +4,6 @@ import { X, Mail, Phone, MapPin, Copy, Check, Linkedin, Github, Send, ExternalLi
 
 export default function ContactModal({ isOpen, onClose }) {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [copiedPhone, setCopiedPhone] = useState(false);
 
   if (!isOpen) return null;
 
@@ -12,12 +11,6 @@ export default function ContactModal({ isOpen, onClose }) {
     navigator.clipboard.writeText(personalInfo.email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
-  const copyPhone = () => {
-    navigator.clipboard.writeText(personalInfo.phone);
-    setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2000);
   };
 
   return (
@@ -60,13 +53,17 @@ export default function ContactModal({ isOpen, onClose }) {
               </div>
               <div className="contact-method-info">
                 <span className="contact-method-label">Phone / WhatsApp</span>
-                <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="contact-method-val">
-                  {personalInfo.phone}
-                </a>
+                <span className="contact-method-val" style={{ fontSize: '0.8125rem', color: 'var(--text-secondary)' }}>
+                  Available upon request
+                </span>
               </div>
-              <button onClick={copyPhone} className="btn btn-secondary btn-sm copy-mini-btn" title="Copy Phone">
-                {copiedPhone ? <Check size={14} className="copy-success" /> : <Copy size={14} />}
-              </button>
+              <a 
+                href={`mailto:${personalInfo.email}?subject=${encodeURIComponent('Request for Phone / WhatsApp Contact')}&body=${encodeURIComponent('Hi Dinesh,\n\nCould you please share your contact number for a conversation regarding an opportunity?\n\nBest regards,')}`}
+                className="btn btn-secondary btn-sm copy-mini-btn" 
+                title="Request Phone via Email"
+              >
+                <Mail size={14} />
+              </a>
             </div>
 
             {/* Location Card */}

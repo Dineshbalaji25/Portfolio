@@ -5,10 +5,10 @@ export const personalInfo = {
   targetRoles: ["Python Developer", "Junior AI Engineer", "Backend / Data Engineer"],
   location: "Bengaluru, Karnataka, India",
   email: "dineshrbalaji@gmail.com",
-  phone: "+91 7259634987",
+  phoneNote: "Available upon request (via email / LinkedIn)",
   github: "https://github.com/Dineshbalaji25",
   linkedin: "https://linkedin.com/in/dineshrbalaji",
-  repoUrl: "https://github.com/Dineshbalaji25/Dineshbalaji25.github.io"
+  repoUrl: "https://github.com/Dineshbalaji25/Portfolio"
 };
 
 export const flagshipData = {
@@ -57,6 +57,9 @@ export const flagshipData = {
     ]
   }
 };
+
+// NOTE: Sample data for demonstration purposes only. All SKU metrics and financial calculations are synthetic mocks.
+export const simulatorDisclaimer = "Sample data for demonstration only. All SKUs, revenue figures, and ROAS calculations shown are synthetic mocks for architecture illustration.";
 
 export const simulatorProducts = [
   {

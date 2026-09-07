@@ -8,7 +8,7 @@ export default function ResumeModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const rawResumeText = `DINESH R BALAJI
-Bengaluru, India | ${personalInfo.email} | ${personalInfo.phone} | linkedin.com/in/dineshrbalaji | github.com/Dineshbalaji25
+Bengaluru, India | ${personalInfo.email} | linkedin.com/in/dineshrbalaji | github.com/Dineshbalaji25
 
 PROFESSIONAL SUMMARY
 Full Stack Developer with 1.5+ years of experience building and scaling a live Django/PostgreSQL e-commerce platform, with a specialization in server-side marketing-technology integrations (Meta Conversions API, Google Ads Data Manager API, GA4) and growing hands-on experience with LLM-powered features (LangChain, RAG, OpenAI API). Comfortable owning a feature end-to-end — architecture, backend implementation, AWS/Docker deployment, and production debugging.
@@ -111,8 +111,6 @@ Data Science & Analytics Using Python — NPTEL (Jan–May 2022)`;
               <span>Bengaluru, India</span>
               <span>•</span>
               <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
-              <span>•</span>
-              <span>{personalInfo.phone}</span>
               <span>•</span>
               <a href={personalInfo.linkedin} target="_blank" rel="noreferrer">linkedin.com/in/dineshrbalaji</a>
               <span>•</span>
