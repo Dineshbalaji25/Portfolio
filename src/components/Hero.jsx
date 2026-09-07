@@ -13,7 +13,8 @@ import {
   CheckCircle2, 
   TrendingUp, 
   ShieldCheck,
-  FileCode
+  FileCode,
+  Phone
 } from 'lucide-react';
 
 export default function Hero({ onOpenResume, onOpenContact }) {
@@ -85,6 +86,14 @@ export default function Hero({ onOpenResume, onOpenContact }) {
           >
             <Mail size={18} />
             <span>{personalInfo.email}</span>
+          </a>
+          <a
+            href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
+            className="social-link"
+            title="Call / WhatsApp"
+          >
+            <Phone size={18} />
+            <span>{personalInfo.phone}</span>
           </a>
         </div>
 

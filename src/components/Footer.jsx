@@ -1,6 +1,6 @@
 import React from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { ArrowUp, Github, Linkedin, Mail, Terminal, Heart, ShieldCheck } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Mail, Phone, Terminal, Heart, ShieldCheck } from 'lucide-react';
 
 export default function Footer({ onOpenResume, onOpenContact }) {
   const scrollToTop = () => {
@@ -58,6 +58,12 @@ export default function Footer({ onOpenResume, onOpenContact }) {
                 <a href={`mailto:${personalInfo.email}`}>
                   <Mail size={14} />
                   <span>{personalInfo.email}</span>
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}>
+                  <Phone size={14} />
+                  <span>{personalInfo.phone}</span>
                 </a>
               </li>
             </ul>

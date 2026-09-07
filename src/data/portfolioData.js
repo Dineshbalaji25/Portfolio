@@ -5,7 +5,8 @@ export const personalInfo = {
   targetRoles: ["Python Developer", "Junior AI Engineer", "Backend / Data Engineer"],
   location: "Bengaluru, Karnataka, India",
   email: "dineshrbalaji@gmail.com",
-  phoneNote: "Available upon request (via email / LinkedIn)",
+  phone: "+91 7259634987",
+  whatsappUrl: "https://wa.me/917259634987",
   github: "https://github.com/Dineshbalaji25",
   linkedin: "https://linkedin.com/in/dineshrbalaji",
   repoUrl: "https://github.com/Dineshbalaji25/Portfolio"
