@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
+    <meta name="color-scheme" content="light" />
     <title>Dinesh R Balaji — Full Stack Developer & Martech Systems Specialist</title>
     <meta name="description" content="Portfolio of Dinesh R Balaji, Full Stack Developer specializing in Django, PostgreSQL, E-commerce backend systems, and server-side Martech integrations (Meta CAPI, GA4, Google Data Manager, Zoho Books). Open to Python Developer and Junior AI Engineer roles." />
     <meta name="keywords" content="Dinesh R Balaji, Full Stack Developer, Django, PostgreSQL, Python Developer, Junior AI Engineer, Meta Conversions API, CAPI, Martech, Bengaluru" />
@@ -21,17 +21,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Theme Initialization to prevent FOUC -->
+    <!-- Theme Initialization: Light Mode Default -->
     <script>
-      (function() {
-        try {
-          const stored = localStorage.getItem('dinesh_portfolio_theme');
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const theme = stored ? stored : (prefersDark ? 'dark' : 'light');
-          document.documentElement.setAttribute('data-theme', theme);
-          document.querySelector('meta[name="color-scheme"]').setAttribute('content', theme);
-        } catch (e) {}
-      })();
+      document.documentElement.setAttribute('data-theme', 'light');
     </script>
   </head>
   <body>

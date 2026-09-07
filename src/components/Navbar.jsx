@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { Terminal, Moon, Sun, FileText, Mail, Github, Linkedin, Menu, X } from 'lucide-react';
+import { Terminal, FileText, Mail, Github, Linkedin, Menu, X } from 'lucide-react';
 
 export default function Navbar({ onOpenResume, onOpenContact }) {
-  const [theme, setTheme] = useState('dark');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-    setTheme(currentTheme);
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -19,17 +15,9 @@ export default function Navbar({ onOpenResume, onOpenContact }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    const nextTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(nextTheme);
-    document.documentElement.setAttribute('data-theme', nextTheme);
-    document.querySelector('meta[name="color-scheme"]')?.setAttribute('content', nextTheme);
-    localStorage.setItem('dinesh_portfolio_theme', nextTheme);
-  };
-
   const navLinks = [
     { label: 'Flagship', href: '#flagship' },
-    { label: 'Postmortems', href: '#postmortems' },
+    { label: 'Deep Dives', href: '#deep-dives' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
@@ -63,15 +51,6 @@ export default function Navbar({ onOpenResume, onOpenContact }) {
 
         {/* Right actions */}
         <div className="nav-actions">
-          <button
-            onClick={toggleTheme}
-            className="theme-toggle-btn"
-            title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
-            aria-label="Toggle theme"
-          >
-            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-
           <button onClick={onOpenResume} className="btn btn-secondary btn-sm nav-resume-btn">
             <FileText size={15} />
             <span>Resume</span>

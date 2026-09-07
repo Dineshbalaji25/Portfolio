@@ -31,7 +31,7 @@ export default function Footer({ onOpenResume, onOpenContact }) {
             <h4 className="footer-col-title">Navigation</h4>
             <ul className="footer-links-list">
               <li><a href="#flagship">Flagship Case Study</a></li>
-              <li><a href="#postmortems">Technical Postmortems</a></li>
+              <li><a href="#deep-dives">Production Case Studies</a></li>
               <li><a href="#experience">Experience &amp; Education</a></li>
               <li><a href="#projects">GitHub Projects</a></li>
               <li><a href="#skills">Skills Matrix</a></li>

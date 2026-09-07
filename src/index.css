@@ -26,8 +26,41 @@
   --shadow-glow: 0 0 25px -5px var(--accent-glow);
 }
 
-/* Dark Theme (Default) */
-[data-theme='dark'], :root {
+/* Light Theme (Default) */
+:root, [data-theme='light'] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-card-glass: rgba(255, 255, 255, 0.92);
+  --bg-card-elevated: #ffffff;
+
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.15);
+  --border-strong: rgba(0, 0, 0, 0.28);
+  --border-focus: #0284c7;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+
+  --accent-cyan: #0284c7;
+  --accent-emerald: #059669;
+  --accent-indigo: #4f46e5;
+  --accent-amber: #d97706;
+  --accent-rose: #e11d48;
+  --accent-purple: #7c3aed;
+  --accent-glow: rgba(2, 132, 199, 0.12);
+
+  --code-bg: #0f172a;
+  --code-text: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-track: #f8fafc;
+}
+
+/* Dark Theme Optional Override */
+[data-theme='dark'] {
   --bg-primary: #080c14;
   --bg-secondary: #0d1322;
   --bg-card: #121a2d;
@@ -59,39 +92,6 @@
   --scrollbar-track: #080c14;
 }
 
-/* Light Theme Override */
-[data-theme='light'] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f1f5f9;
-  --bg-card-glass: rgba(255, 255, 255, 0.85);
-  --bg-card-elevated: #f8fafc;
-
-  --border-subtle: rgba(0, 0, 0, 0.08);
-  --border-medium: rgba(0, 0, 0, 0.15);
-  --border-strong: rgba(0, 0, 0, 0.28);
-  --border-focus: #0284c7;
-
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  --text-inverse: #ffffff;
-
-  --accent-cyan: #0284c7;
-  --accent-emerald: #059669;
-  --accent-indigo: #6366f1;
-  --accent-amber: #d97706;
-  --accent-rose: #e11d48;
-  --accent-purple: #9333ea;
-  --accent-glow: rgba(2, 132, 199, 0.12);
-
-  --code-bg: #0f172a;
-  --code-text: #f1f5f9;
-  --scrollbar-thumb: #cbd5e1;
-  --scrollbar-track: #f8fafc;
-}
-
 /* Base Styles */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -101,7 +101,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark light;
+  color-scheme: light;
 }
 
 body {
@@ -113,7 +113,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   position: relative;
-  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 /* Subtle ambient background grid & lighting */
@@ -125,14 +124,14 @@ body::before {
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 85% 65%, rgba(129, 140, 248, 0.05) 0%, transparent 45%),
-    linear-gradient(to right, var(--border-subtle) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--border-subtle) 1px, transparent 1px);
+    radial-gradient(circle at 15% 15%, rgba(2, 132, 199, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 65%, rgba(79, 70, 229, 0.04) 0%, transparent 45%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 #root {

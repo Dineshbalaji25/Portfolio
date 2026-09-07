@@ -45,9 +45,9 @@ export default function Hero({ onOpenResume, onOpenContact }) {
             <ArrowRight size={16} />
           </a>
 
-          <a href="#postmortems" className="btn btn-secondary">
+          <a href="#deep-dives" className="btn btn-secondary">
             <Terminal size={16} />
-            <span>Read Technical Postmortems</span>
+            <span>Production Deep-Dives</span>
           </a>
 
           <button onClick={onOpenResume} className="btn btn-ghost">

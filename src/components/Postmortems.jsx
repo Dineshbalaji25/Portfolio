@@ -18,12 +18,13 @@ export default function Postmortems() {
   const currentPostmortem = postmortems.find((p) => p.id === activeTab) || postmortems[0];
 
   return (
-    <section id="postmortems" className="section postmortems-section">
+    <section id="deep-dives" className="section postmortems-section">
+      <span id="postmortems" style={{ display: 'none' }}></span>
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-tag">Engineering War Stories</span>
-          <h2 className="section-title">Technical Deep-Dives &amp; Production Postmortems</h2>
+          <span className="section-tag">Systems Diagnostics &amp; Reliability</span>
+          <h2 className="section-title">Production Case Studies &amp; Architecture Deep-Dives</h2>
           <p className="section-subtitle">
             Senior backend engineering isn't just about shipping features — it's about diagnosing low-level failures under production pressure, understanding telemetry, and remediating issues without data loss.
           </p>
